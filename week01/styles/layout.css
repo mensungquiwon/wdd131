@@ -1,0 +1,17 @@
+body {
+    display: grid;
+    width: 840px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: lightgray;
+    padding: 10px;
+    
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
