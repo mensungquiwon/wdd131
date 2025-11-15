@@ -1,0 +1,22 @@
+
+@media (min-width: 37.5em) {
+    .container {
+        grid-template-columns: repeat (3, 1fr);
+    }
+    	#menu {
+		display: none; /* hide hamburger button */
+	}
+
+	nav ul  {
+		flex-direction: row;
+	}
+
+	nav a {
+		display: block;
+		flex: 1 1 100%;
+	}
+	
+	.stuff {
+		margin: 1rem auto;
+	}
+}

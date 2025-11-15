@@ -1,0 +1,88 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+  display: flex;           
+  justify-content: space-between;
+  align-items: center;   
+  padding: 10px;
+  background-color: #f4f4f4;
+}
+
+
+nav {
+	max-width: 700px;
+	margin: 1rem auto;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	flex-direction: row;
+    justify-content: space-around;
+    gap: 2rem;
+}
+nav a {
+		flex: 1 1 100%;
+        text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration:  ;
+    color: rgb(238, 238, 55);
+}
+header, main, footer {
+    max-width: 700px;
+    margin: 1rem auto;
+    padding: 1rem;
+}   
+h1 {
+    display: block;
+    text-align: center;
+
+}
+main { 
+  max-width: 700px;
+  margin: 0 auto;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 25px;
+	place-items: center;
+}
+footer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: gray;
+    margin-top: 2rem;
+    background-color:#f4f4f4 ;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "❎";
+}
+
+.open a {
+	display: block;
+}
+
+.active::before {
+	content: "📍";  /* just a wayfinding symbol for the user */
+}
+
+.stuff {
+	margin: .5rem;
+	border: 1px solid rgb(0 0 0 / .1);
+	background-color: #bed;
+	max-width: 580px;
+	height: 100vh;
+	
+}
