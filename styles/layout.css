@@ -1,4 +1,11 @@
+* {
+    width: 840px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body {
+    widith: 840px;
     display: grid;
     grid-template-columns: auto 1fr auto /300px 1fr auto;
     height: 100vh;
@@ -50,4 +57,12 @@ footer {
     font-weight: 700;
     text-decoration: underline;
     text-decoration-color: yellow;
+}
+
+.card {
+    float: left;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
