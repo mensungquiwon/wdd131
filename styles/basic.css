@@ -44,6 +44,19 @@ aside {
     text-align: center;
     padding: 20px;
 }
+aside li a {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+
+}
+aside li a:hover {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: yellow;
+}
 footer {
     background-color: gray;
     padding: 2rem;
