@@ -1,5 +1,9 @@
 const year = document.querySelector("#currentYear");
-document.getElementById("lastModified").textContent = "Last Modified: " + new Date().getFullYear();
+const today = new Date();
+const month = today.getMonth() + 1;
+const date = today.getDate();
+const fullYear = today.getFullYear();
+document.getElementById("lastModified").textContent = "Last Modified: " + month + "/" + date + "/" + fullYear;
 
 
 const hamburger = document.querySelector("#menu");

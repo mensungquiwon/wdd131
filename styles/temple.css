@@ -14,6 +14,7 @@ header {
     color: black;
     padding: 10px 20px;
     text-align: center;
+    
 }
 
 nav {
@@ -43,12 +44,17 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
 }
+.gallery img {
+    max-width: 100%;
+    height: auto;
+}
 
 .gallery figure {
     margin: 0;
     background-color: #f4f4f4;
     padding: 10px;
     border: 1px solid #ddd;
+
 }
 
 h1 {
@@ -59,7 +65,9 @@ figcaption {
     margin-top: 8px;
     font-style: italic;
     font-size: small;
-    color: #555;
+    color: black;
+    text-align: center;
+
 }
 
 #menu {
