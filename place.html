@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home page of my country Liberia. Find basic info of Liberia here">
+    <meta name="author" content="Jonathan Quiwon">
+    <title>My country page</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <h1>Liberia</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 1000px )" srcset="images/hero-large.webp">
+                <source media="(min-width: 500px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-mobile.webp" alt="Hero hippotamus image of Liberia" width="500" height="250">
+            </picture>
+            <section class="data">
+                <h2>Data </h2>
+                    <p>Area: 111,369 sq km</p>
+                    <p>Population: ~5.3 million</p>
+                    <p>Capital: Monrovia</p>
+                    <p>Language: English</p>
+                    <p>Currency: Liberian Dollar (LRD)</p>
+                    <p>Time Zone: GMT (UTC +0)</p>
+                    <p>Calling Code: +231</p>
+                    <p>Internet TLD: .lr</p>
+            </section>
+            <section id="weather">
+                <h2>Weather</h2>
+                <img src="images/partly_cloudy_day_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="weather icon" width="200" height="100">
+
+                <p>Temperature: <span id="temperature">10</span> °C</p>
+                <p>Conditions: Partly Cloudy</p>
+                <p>Wind Speed: <span id="windspeed">5</span> km/h</p>
+                <p>Wind Chill: <span id="windchill"></span></p>
+                
+            </section>
+        </div>
+    </main>
+    <footer>
+        <footer>
+        <p>&copy;2025<span id="currentYear"></span> 🌻Jonathan Mensung Quiwon 🌻 Liberia</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    </footer>
+    
+    
+</body>
+</html>
