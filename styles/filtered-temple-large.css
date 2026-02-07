@@ -1,0 +1,53 @@
+@media screen and (min-width: 37.5em) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    #menu {
+        display: none;
+    }
+
+    header {
+
+        background-color: black;
+        color: white;
+        
+    }
+    body, footer {
+        box-sizing: border-box;
+    }
+
+
+
+    .navigation {
+
+        flex-direction: row;
+        background-color: black;
+        border: 2px solid brown;
+
+
+    }
+
+    .navigation a {
+        display: block;
+        flex: 1 1 auto;
+    }
+
+
+    .gallery img,
+    .temple-card img,
+    .filtered-temple-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+    .temple-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+}
