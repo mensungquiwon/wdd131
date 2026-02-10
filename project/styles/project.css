@@ -1,32 +1,32 @@
 :root{
-    ---primary-color: rgb(193, 39, 45);        /*main headings, logo text, 'order now button' */
-    ---secondary-color: rgb(27, 94, 32);      /* navigation bars, bg banners, buttons and section bg */
-    ---accent1: rgb(249, 168, 37);           /* highlights, icons, decorative shapes */
+    --primary-color: rgb(193, 39, 45);        /*main headings, logo text, 'order now button' */
+    --secondary-color: rgb(27, 94, 32);      /* navigation bars, bg banners, buttons and section bg */
+    --accent1: rgb(249, 168, 37);           /* highlights, icons, decorative shapes */
     ---accent2: rgb(239, 108, 0);            /* Border patterns, hover effects, decorative accent */
-    ---primary-font: 'Raleway', sans-serif;    /* logo text, h1, section headings */
-    ---secondary-font: 'poppins', sans-serif;   /* Body text, menu descriptions, buttons, navigation */
+    --primary-font: 'Raleway', sans-serif;    /* logo text, h1, section headings */
+    --secondary-font: 'poppins', sans-serif;   /* Body text, menu descriptions, buttons, navigation */
 
 }
 
 body {
     
-    font-size: 700;
+    font-size: 700px;
 }
 
 h1 {
     color: #fff;
-    font-family: var(---primary-font);
+    font-family: var(--primary-font);
 }
 p, nav {
-    font-family: var(---secondary-font); 
+    font-family: var(--secondary-font); 
 }
 
 button {
-    background-color: var(---primary-color);
+    background-color: var(--primary-color);
 }
 
 header {
-    background-color: var(---secondary-color);
+    background-color: var(--secondary-color);
 }
 .site-header{
   display: flex;
@@ -37,7 +37,7 @@ header {
   padding: 0.75rem 1rem;
 }
 h2 {
-    color: var(---primary-color)
+    color: var(--primary-color)
 }
 
 .main-nav ul{
