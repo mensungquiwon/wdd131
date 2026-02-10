@@ -2,7 +2,7 @@
     --primary-color: rgb(193, 39, 45);        /*main headings, logo text, 'order now button' */
     --secondary-color: rgb(27, 94, 32);      /* navigation bars, bg banners, buttons and section bg */
     --accent1: rgb(249, 168, 37);           /* highlights, icons, decorative shapes */
-    ---accent2: rgb(239, 108, 0);            /* Border patterns, hover effects, decorative accent */
+    --accent2: rgb(239, 108, 0);            /* Border patterns, hover effects, decorative accent */
     --primary-font: 'Raleway', sans-serif;    /* logo text, h1, section headings */
     --secondary-font: 'poppins', sans-serif;   /* Body text, menu descriptions, buttons, navigation */
 
