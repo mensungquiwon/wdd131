@@ -8,6 +8,7 @@ body {
 main {
     padding: 0 2%;
     min-height: 20rem;
+    margin: 0 auto;
     
 }
 .review-form {
@@ -16,10 +17,10 @@ main {
     padding: 2rem;
 }
 
-
-h1 {
+header h1 {
     margin-bottom: .5rem;
     background-color: #292933;
+    margin-bottom: 0;
     color: white;
     padding: .5rem;
     text-align: center;
@@ -31,7 +32,15 @@ h1 {
     color: black;
     font-size: .9rem;
 
+
 }
+
+.review-form input[type="checkbox"] + label {
+  display: block;      
+  margin-left: .4rem;       
+  padding-top: 0;          
+}
+
  .review-form textarea {
     width: 100%;
     padding: .5rem;
@@ -114,7 +123,7 @@ h1 {
 
 @media only screen and (min-width: 64rem) {
 
-     main, footer {
+     header, main, footer {
         max-width: 64rem;
         margin: 1rem auto;
         padding: 10px;

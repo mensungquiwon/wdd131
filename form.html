@@ -8,58 +8,66 @@
     <title>Product Review</title>
     <link rel="stylesheet" href="./styles/form.css">
     <script src="./scripts/form.js" defer></script>
-
 </head>
 <body>
-    <main>
+    <header>
         <h1>Product Review</h1>
-    <form method="get" action="review.html" class="review-form">
+    </header>
+    <main>
+        <form method="get" action="review.html" class="review-form">
 
-        <label for="product">Product Name*</label>
-        <select id="product" name="product" required>
-            <option value="" disabled selected>Please select a product</option>
-              </select>
-                <label for="rating5">Overall Rating</label>
+            <label for="product">Product Name*</label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Please select a product</option>
+            </select>
+
+            <label for="rating5">Overall Rating</label>
             <div class="stars">
                 <input type="radio" id="rating1" name="rating" value="1" required>
                 <label for="rating1">&star;</label>
+
                 <input type="radio" id="rating2" name="rating" value="2" required>
                 <label for="rating2">&star;&star;</label>
+
                 <input type="radio" id="rating3" name="rating" value="3" required>
                 <label for="rating3">&star;&star;&star;</label>
+
                 <input type="radio" id="rating4" name="rating" value="4" required>
                 <label for="rating4">&star;&star;&star;&star;</label>
+
                 <input type="radio" id="rating5" name="rating" value="5" required>
                 <label for="rating5">&star;&star;&star;&star;&star;</label>
             </div>
-     
-      
 
-        <label for="date">Date of Installation</label>
-        <input type="date" id="date" name="date" required>
-       
-        <label>Which features did you find useful in the product?
-        (check all that apply)
-            <label><input type="checkbox" name="Durability" value="yes">Durability</label>
-            <label><input type="checkbox" name="Ease" value="yes">Ease of Use</label>
-            <label><input type="checkbox" name="Performance" value="yes">Performance</label>
-            <label><input type="checkbox" name="Design" value="yes">Design</label>
-        </label>
+            <label for="date">Date of Installation</label>
+            <input type="date" id="date" name="date" required>
 
-        <label for="comments">Written Review (optional)</label>
-        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+             <div>Which features did you find useful in the product? (check all that apply)</div>
+            <input type="checkbox" id="features1" name="Durability" value="yes">
+            <label for="features1">Durability</label>
 
-        <label for="fullName">Full Name</label>
-        <input type="text" id="fullName" name="fullName">
+            <input type="checkbox" id="features2" name="Ease" value="yes">
+            <label for="features2">Ease of Use</label>
 
-        <input type="submit" value="Post Review">
+            <input type="checkbox" id="features3" name="Performance" value="yes">
+            <label for="features3">Performance</label>
 
-    </form>
+            <input type="checkbox" id="features4" name="Design" value="yes">
+            <label for="features4">Design</label>
+
+            <label for="comments">Written Review (optional)</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName">
+
+            <input type="submit" value="Post Review">
+
+        </form>
     </main>
     <footer>
         <p>&copy;2025<span id="currentYear"></span> |Jonathan Mensung Quiwon | Liberia</p>
         <p id="lastModified"></p>
     </footer>
-    
 </body>
 </html>
