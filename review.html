@@ -1,0 +1,12 @@
+<!-- review.html -->
+<p>Total reviews submitted: <strong class="review-count">0</strong></p>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const KEY = "reviewCount";
+  const current = Number(localStorage.getItem(KEY)) || 0;
+  const next = current + 1;
+  localStorage.setItem(KEY, String(next));
+  document.querySelector(".review-count").textContent = next;
+});
+</script>
