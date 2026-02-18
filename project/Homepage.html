@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mary's Kitchen Home Page</title>
+    <meta name="description" content="Welcome to Mary's Kitchen, where we serve delicious homemade meals. 
+    Explore our menu, place an order, and enjoy the taste of home-cooked food.">
+    <meta name="author" content="Jonathan Mensung Quiwon">
+    <link rel="stylesheet" href="./styles/mary.css">
+    <script src="./scripts/mary.js" defer ></script>
+</head>
+<body>
+    <header>
+        <img src="./images/mary_logo.webp" alt="Mary's Kitchen Logo" class="logo" width="100" height="50">
+
+        <button id="menu" aria-label="Toggle navigation menu"></button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="Order.html">Order</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 1000px )" srcset="./images/large.webp">
+                <source media="(min-width: 700px)" srcset="./images/medium.webp">
+                <img src="./images/small.webp" alt="Chuck rice image of Mary's Kitchen" width="500" height="250">
+            </picture>
+        <section class="welcome">
+            <h2>Welcome to Mary's Kitchen</h2>
+            <p>At Mary's Kitchen, we pride ourselves on serving delicious homemade meals made with love and the freshest ingredients. Whether you're craving comfort food or looking for something new, our menu has something for everyone.</p>
+        </section> 
+        <div class="popular">
+            <h2>Popular Dishes of the Month</h2>
+            <div class="popular-dish"></div>
+        </div>
+
+
+        <section class="highlights">
+            <h2>Why Choose Mary's Kitchen?</h2>
+            <ul>
+                <li>Fresh, high-quality ingredients</li>
+                <li>Variety of dishes to choose from</li>
+                <li>Convenient online ordering</li>
+                <li>Friendly and fast service</li>
+            </ul>
+        </section>
+
+        <section class="call-to-action">
+            <h2>Ready to Taste the Difference?</h2>
+            <p>Explore our menu and place your order today! We can't wait to serve you a delicious meal that feels like home.</p>
+            <a href="Menu.html" class="btn">View Menu</a>
+        </section>
+    </main>
+
+     <footer>
+        <p>&copy;2025<span id="currentYear"></span> 🌻Jonathan Mensung Quiwon 🌻 Liberia</p>
+        <p id="lastModified"></p>
+    </footer>
+    
+</body>
+</html>

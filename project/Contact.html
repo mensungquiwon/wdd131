@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Mary's Kitchen</title>
+
+    <meta name="description" content="Get in touch with Mary's Kitchen. Whether you have questions about our menu, want to provide feedback, or need assistance with your order, we're here to help.">
+    <meta name="author" content="Jonathan Mensung Quiwon">
+
+    <link rel="stylesheet" href="./styles/mary.css">
+    <script src="./scripts/mary.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <img src="./images/mary_logo.webp" alt="Mary's Kitchen Logo" class="logo">
+        <button id="menu" aria-label="Toggle navigation menu"></button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="Order.html">Order</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Whether you have questions, want to provide feedback, or need assistance with your order, we're here to help.</p>
+
+        <!-- Contact Information Block -->
+        <div class="contact-block">
+            <h2>Contact Information</h2>
+            <p>Address:<br>Adjacent Zone 8 Police Station, ELWA Community, Paynesville, Liberia</p>
+            <p>Phone:<br>(+231) 880 778 315<br>(+231) 775 888 953</p>
+            <p>Email:<br>maryskitchen@gmail.com</p>
+        </div>
+
+        <!-- Simple Contact Form Block -->
+        <div class="contact-block">
+            <h2>Send Us a Message</h2>
+
+            <form class="simple-form" method="get">
+                <label>Name</label>
+                <input type="text" name="name" placeholder="Your name" required>
+
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Your email" required>
+
+                <label>Message</label>
+                <textarea name="message" rows="5" placeholder="Write your message..." required></textarea>
+
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+
+        <div class="contact-block">
+            <h2>Newsletter</h2>
+            <p>Subscribe to get updates, specials, and news from Mary's Kitchen.</p>
+
+            <form class="simple-form">
+                <label for="newsletter-name">Name</label>
+                <input type="text" id="newsletter-name" name="newsletter-name" placeholder="Your name">
+                <label for="newsletter-email">Email</label>
+                <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Your email" required>
+                <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy;2025<span id="currentYear"></span> 🌻Jonathan Mensung Quiwon 🌻 Liberia</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>

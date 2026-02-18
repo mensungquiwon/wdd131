@@ -1,0 +1,529 @@
+:root{
+    --primary-color: rgb(193, 39, 45);        /*main headings, logo text, 'order now button' */
+    --secondary-color: rgb(27, 94, 32);      /* navigation bars, bg banners, buttons and section bg */
+    --accent1: rgb(249, 168, 37);           /* highlights, icons, decorative shapes */
+    --accent2: rgb(239, 108, 0);            /* Border patterns, hover effects, decorative accent */
+    --primary-font: 'Raleway', sans-serif;    /* logo text, h1, section headings */
+    --secondary-font: 'poppins', sans-serif;   /* Body text, menu descriptions, buttons, navigation */
+
+}
+
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1080px;
+    width: 100%;
+}
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+picture {
+    width: 100%;
+}
+
+header {
+    
+  display: flex;
+  align-items: center;      
+  justify-content: space-between; 
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 2px;
+  gap: 5px;                    
+  margin-bottom: 1px;
+}
+
+
+.logo {
+    width: 100px;
+    height: auto;
+    padding: 0;
+
+}
+nav {
+    gap: 0.25rem;
+    padding: 0.5rem;
+}
+.navigation {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navigation a {
+    text-decoration: none;
+    color: #fff;
+    font-family: var(--secondary-font);
+    
+}
+
+
+
+#menu::before{
+  content:"☰";
+  font-size:1.35rem;
+  line-height:1;
+}
+
+#menu.open::before{
+  content:"✖";
+}
+
+/* show menu when nav is “open” on mobile */
+.navigation.open{
+  display:flex;
+}
+#menu{
+    font-size: 1.5rem;
+    background: none;
+    border: 0;
+    color: white;
+    position: absolute;
+    top: 1;
+    right: 20px;
+}
+#menu.open::before {
+    content: "✖";
+}
+.open a {
+    display: block;
+}
+.hero {
+    position: relative;
+    z-index: 1;
+}
+
+.popular h2 {
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#order-btn {
+    display: flex;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: var(--secondary-font);
+    font-size: larger;
+}
+.dish-btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--primary-color, #154734);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.highlights, .call-to-action {
+    background-color: var(--accent1);
+    color: black;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    border-radius: 10px;
+    min-height: 250px;
+}
+.highlights ul {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+}
+.call-to-action a {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: var(--secondary-font);
+}
+
+footer {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 0;
+    font-family: var(--secondary-font);
+}
+/* --- SPACE BELOW HERO --- */
+.popular-dish, .menu-list {
+  margin-top: 2rem; /* prevents touching hero image */
+}
+
+/* --- GRID LAYOUT --- */
+.popular-dish, .menu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  width: min(95%, 1100px);
+  margin-inline: auto; 
+}
+
+/* --- CARD STYLE (SMALL & CLEAN) --- */
+.popular-dish section, .menu-list section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  text-align: center;
+}
+
+/* --- IMAGE SIZE CONTROL --- */
+.popular-dish img, .menu-list img {
+  width: 100%;
+  height: 150px;        /* keeps images small */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* --- TEXT STYLE --- */
+.popular-dish h3, .menu-list h3 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.popular-dish p, .menu-list p {
+  font-size: 0.85rem;
+  margin: 0.25rem 0;
+}
+
+
+
+
+/* ===========================
+   Order / Checkout — Match Home/Menu
+   =========================== */
+
+/* Page container width and spacing like menu/home */
+.checkout-page {
+  width: min(95%, 1100px);
+  margin: 2rem auto 3rem;
+  color: #1f2328;
+}
+
+/* Title similar scale */
+.checkout-page h1 {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  font-size: 1.7rem;
+}
+
+/* The cart area acts like a grid wrapper (like .menu-list / .popular-dish) */
+#cart {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* same grid logic */
+  gap: 1rem;
+  width: min(95%, 1100px);
+  margin-inline: auto;
+  margin-top: 1rem;
+}
+
+/* Treat each cart item row as a card (same as your dish cards) */
+.cart-list { 
+  display: contents; /* let children participate in the grid directly */
+}
+
+/* Each item becomes a card matching your home/menu cards */
+.cart-row {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  text-align: center;
+
+  /* Inside each card, we’ll arrange content */
+  display: grid;
+  grid-template-rows: auto auto 1fr auto auto; /* image, name, unit, qty controls, line total */
+  gap: 0.5rem;
+}
+
+/* Image style same as cards */
+.cart-row img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Name and small unit price */
+.cart-info h3 {
+  margin: 0.25rem 0 0.15rem;
+  font-size: 1rem;
+}
+
+.cart-info .muted {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #667085;
+}
+
+/* Quantity controls—centered */
+.cart-controls {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.qty-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+}
+.qty-btn:hover { background: #f7f8f9; }
+
+.qty-input {
+  width: 56px;
+  height: 30px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Line total styled like a price on card */
+.line-total {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Remove button */
+.remove-btn {
+  border: none;
+  background: transparent;
+  color: #b42318;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.remove-btn:hover { text-decoration: underline; }
+
+/* Summary box styled similar to cards, full width on its own row */
+.cart-summary {
+  grid-column: 1 / -1; /* span entire grid width */
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  border: 1px solid #e5e7eb;
+
+  display: grid;
+  gap: 0.6rem;
+  justify-items: end;
+}
+
+/* Summary text right-aligned to match totals area style */
+.cart-summary > div {
+  display: grid;
+  gap: 0.25rem;
+  text-align: right;
+}
+
+/* Action buttons row */
+.cart-actions {
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.55rem 1rem;
+  background: #1e7f49;   
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  border: 1px solid #1e7f49;
+  transition: background .15s ease, filter .15s ease;
+  cursor: pointer;
+}
+
+.btn-primary:hover,
+.dish-btn:hover {
+  background: #166339;    
+  filter: brightness(0.98);
+}
+
+.btn-outline {
+  padding: 0.55rem 1rem;
+  background: #fff;
+  color: #1f2328;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-outline:hover { background: #f7f8f9; }
+
+#cart > .muted {
+  grid-column: 1 / -1;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1rem;
+  color: #667085;
+}
+
+/* Contact page layout */
+.contact-page {
+  width: min(95%, 1100px);
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.contact-block {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem auto;
+  width: min(95%, 650px);
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+}
+
+.contact-block h2 {
+  margin-bottom: 0.6rem;
+  font-size: 1.3rem;
+}
+
+.contact-block p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+/* Simple contact form */
+.simple-form {
+  display: grid;
+  gap: 0.25rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.simple-form input,
+.simple-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+.simple-form input:focus,
+.simple-form textarea:focus {
+  outline: none;
+  border-color: #1e7f49;
+  box-shadow: 0 0 0 2px rgba(30, 127, 73, .25);
+}
+
+/* Green button */
+.btn-primary {
+  padding: 0.6rem 1rem;
+  background: #1e7f49;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background: #166339;
+}
+
+.simple-form label, .contact-block label {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0;
+  gap: 0.25rem;
+}
+
+.contact-block {
+  background: linear-gradient(135deg, #ffffff, #f3f9f4);
+  border: 1px solid #d6e7db;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin: 1.5rem auto;
+  width: min(95%, 650px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+  font-family: var(--secondary-font);
+}
+
+
+
+@media screen and (min-width:37.5em){
+  #menu{ display:none; }        /* hide hamburger on desktop */
+
+  .navigation{
+    display:flex;               /* always visible on desktop */
+    flex-direction:row;
+    align-items:center;
+    gap:1rem;
+    background:transparent;
+  }
+
+  header{
+    background-color:var(--primary-color);
+    color:#fff;
+  }
+
+nav ul{
+    flex-direction: row;
+    background-color:var(--primary-color);
+  }
+
+.navigation a{
+    display:block;
+    flex:1 1 auto;
+  }
+  .welcome {
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    width: 80%;
+
+}

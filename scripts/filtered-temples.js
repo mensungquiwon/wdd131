@@ -109,8 +109,8 @@ function createTempleCard()  {
         let dedication = document.createElement("p");
         let area = document.createElement("p");
         let img = document.createElement("img");
-        let figuure = document.createElement("figyre");
-        figuure.classList.add("figure-overlay")
+        let figure = document.createElement("figure");
+        figure.classList.add("figure-overlay")
     
         name.textContent =temple.templeName;
         location.innerHTML = `<span class = "label">Location:<span> ${temple.location}`;
