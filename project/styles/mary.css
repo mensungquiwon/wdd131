@@ -77,7 +77,6 @@ nav {
   content:"✖";
 }
 
-/* show menu when nav is “open” on mobile */
 .navigation.open{
   display:flex;
 }
@@ -172,12 +171,11 @@ footer {
     margin-top: 0;
     font-family: var(--secondary-font);
 }
-/* --- SPACE BELOW HERO --- */
+
 .popular-dish, .menu-list {
-  margin-top: 2rem; /* prevents touching hero image */
+  margin-top: 2rem; 
 }
 
-/* --- GRID LAYOUT --- */
 .popular-dish, .menu-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -186,7 +184,6 @@ footer {
   margin-inline: auto; 
 }
 
-/* --- CARD STYLE (SMALL & CLEAN) --- */
 .popular-dish section, .menu-list section {
   background: #fff;
   border-radius: 10px;
@@ -195,15 +192,12 @@ footer {
   text-align: center;
 }
 
-/* --- IMAGE SIZE CONTROL --- */
 .popular-dish img, .menu-list img {
   width: 100%;
-  height: 150px;        /* keeps images small */
+  height: 150px;      
   object-fit: cover;
   border-radius: 8px;
 }
-
-/* --- TEXT STYLE --- */
 .popular-dish h3, .menu-list h3 {
   font-size: 1rem;
   margin: 0.5rem 0;
@@ -218,39 +212,33 @@ footer {
 
 
 /* ===========================
-   Order / Checkout — Match Home/Menu
+   Order / Checkout 
    =========================== */
-
-/* Page container width and spacing like menu/home */
 .checkout-page {
   width: min(95%, 1100px);
   margin: 2rem auto 3rem;
   color: #1f2328;
 }
 
-/* Title similar scale */
 .checkout-page h1 {
   text-align: center;
   margin-bottom: 1.2rem;
   font-size: 1.7rem;
 }
 
-/* The cart area acts like a grid wrapper (like .menu-list / .popular-dish) */
 #cart {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* same grid logic */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
   gap: 1rem;
   width: min(95%, 1100px);
   margin-inline: auto;
   margin-top: 1rem;
 }
 
-/* Treat each cart item row as a card (same as your dish cards) */
 .cart-list { 
-  display: contents; /* let children participate in the grid directly */
+  display: contents;
 }
 
-/* Each item becomes a card matching your home/menu cards */
 .cart-row {
   background: #fff;
   border-radius: 10px;
@@ -258,13 +246,11 @@ footer {
   box-shadow: 0 2px 6px rgba(0,0,0,.08);
   text-align: center;
 
-  /* Inside each card, we’ll arrange content */
   display: grid;
-  grid-template-rows: auto auto 1fr auto auto; /* image, name, unit, qty controls, line total */
+  grid-template-rows: auto auto 1fr auto auto; 
   gap: 0.5rem;
 }
 
-/* Image style same as cards */
 .cart-row img {
   width: 100%;
   height: 150px;
@@ -274,7 +260,6 @@ footer {
   margin-bottom: 0.25rem;
 }
 
-/* Name and small unit price */
 .cart-info h3 {
   margin: 0.25rem 0 0.15rem;
   font-size: 1rem;
@@ -285,8 +270,6 @@ footer {
   font-size: 0.85rem;
   color: #667085;
 }
-
-/* Quantity controls—centered */
 .cart-controls {
   display: inline-flex;
   align-items: center;
@@ -315,13 +298,11 @@ footer {
   font-size: 0.95rem;
 }
 
-/* Line total styled like a price on card */
 .line-total {
   font-weight: 700;
   font-size: 1rem;
 }
 
-/* Remove button */
 .remove-btn {
   border: none;
   background: transparent;
@@ -331,9 +312,8 @@ footer {
 }
 .remove-btn:hover { text-decoration: underline; }
 
-/* Summary box styled similar to cards, full width on its own row */
 .cart-summary {
-  grid-column: 1 / -1; /* span entire grid width */
+  grid-column: 1 / -1; 
   background: #fff;
   border-radius: 10px;
   padding: 0.85rem 1rem;
@@ -345,14 +325,13 @@ footer {
   justify-items: end;
 }
 
-/* Summary text right-aligned to match totals area style */
+
 .cart-summary > div {
   display: grid;
   gap: 0.25rem;
   text-align: right;
 }
 
-/* Action buttons row */
 .cart-actions {
   display: inline-flex;
   gap: 0.5rem;
@@ -398,7 +377,6 @@ footer {
   color: #667085;
 }
 
-/* Contact page layout */
 .contact-page {
   width: min(95%, 1100px);
   margin: 2rem auto;
@@ -425,7 +403,6 @@ footer {
   font-size: 0.95rem;
 }
 
-/* Simple contact form */
 .simple-form {
   display: grid;
   gap: 0.25rem;
@@ -484,13 +461,13 @@ footer {
   font-family: var(--secondary-font);
 }
 
-
+/* Desktop view */
 
 @media screen and (min-width:37.5em){
-  #menu{ display:none; }        /* hide hamburger on desktop */
+  #menu{ display:none; }      
 
   .navigation{
-    display:flex;               /* always visible on desktop */
+    display:flex;             
     flex-direction:row;
     align-items:center;
     gap:1rem;

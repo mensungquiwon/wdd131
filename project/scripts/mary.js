@@ -1,11 +1,4 @@
-/*************************************************
- * Mary's Kitchen – Single JS file (simple version)
- * - Popular Dishes (Home)
- * - Menu (Menu page)
- * - LocalStorage Cart (+ Checkout page render)
- **************************************************/
 
-/* =============== DATA ================== */
 const popularDishes = [
   {
     id: "chuck-rice",
@@ -44,15 +37,10 @@ const popularDishes = [
     tags: ["Traditional", "Comfort Food"]
   }
 ];
-
-/* =============== SIMPLE UTILS ================== */
 function moneyUSD(n) {
   return `$${Number(n).toFixed(2)}`;
 }
-// If you prefer Liberian Dollar, use this instead:
-// function moneyLRD(n) { return new Intl.NumberFormat("en-LR", {style:"currency", currency:"LRD"}).format(Number(n)); }
 
-/* =============== CART (LocalStorage) ================== */
 const CART_KEY = "mk_cart";
 
 function getCart() {
@@ -94,7 +82,6 @@ function clearCart() {
   saveCart([]);
 }
 
-/* =============== BUTTON FACTORY ================== */
 function makeOrderButton(dishId) {
   const btn = document.createElement("a");
   btn.textContent = "Order Now";
@@ -103,18 +90,15 @@ function makeOrderButton(dishId) {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
     addToCart(dishId, 1);
-    // Redirect to checkout page
     window.location.href = "Order.html";
   });
   return btn;
 }
 
-/* =============== HOME: Popular Dishes ================== */
 function createPopularDishCards() {
   const container = document.querySelector(".popular-dish");
   if (!container) return;
 
-  // Clean container if function re-runs
   container.innerHTML = "";
 
   popularDishes.forEach(dish => {
@@ -130,9 +114,7 @@ function createPopularDishCards() {
     img.loading = "lazy";
 
     name.textContent = dish.name;
-    // Make "Description:" label bold (as you requested)
     desc.innerHTML = `<strong>Description:</strong> ${dish.description}`;
-    // Make "Price:" label bold
     price.innerHTML = `<strong>Price:</strong> ${moneyUSD(dish.price)}`;
 
     card.append(img, name, desc, price, btn);
@@ -169,14 +151,12 @@ function createMenuList() {
   });
 }
 
-/* =============== CHECKOUT: Render Cart ================== */
-/* This runs automatically if the page has <section id="cart"></section> */
 function renderCheckoutCart() {
   const cartEl = document.getElementById("cart");
   if (!cartEl) return;
 
   const cart = getCart();
-  cartEl.innerHTML = ""; // clear
+  cartEl.innerHTML = ""; 
 
   if (!cart.length) {
     cartEl.innerHTML = `<p class="muted">Your cart is empty.</p>`;
@@ -262,7 +242,7 @@ function renderCheckoutCart() {
   const summary = document.createElement("div");
   summary.className = "cart-summary";
 
-  const taxRate = 0.07; // example 7%
+  const taxRate = 0.07; 
   const tax = subtotal * taxRate;
   const total = subtotal + tax;
 
@@ -298,9 +278,8 @@ function renderCheckoutCart() {
 
   cartEl.append(list, summary);
 }
-
-/* =============== RUN ONLY WHERE NEEDED ================== */
 document.addEventListener("DOMContentLoaded", () => {
+
   // Home page (Popular Dishes)
   if (document.querySelector(".popular-dish")) {
     createPopularDishCards();
